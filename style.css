@@ -1,0 +1,398 @@
+/* ============================================================
+   Root variables — edit here to change colours/fonts globally
+   ============================================================ */
+:root {
+  --ink:      #0f172a;
+  --paper:    #ffffff;
+  --accent:   #1e3a5f;
+  --muted:    #64748b;
+  --border:   #e2e8f0;
+  --bg-tag:   #f1f5f9;
+  --max-width: 860px;
+}
+
+/* ============================================================
+   Reset & base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+main {
+  padding: 4rem 0 6rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+nav {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.nav-name:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  color: var(--accent);
+}
+
+/* ============================================================
+   Section labels and dividers
+   ============================================================ */
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+/* ============================================================
+   Home — bio grid
+   ============================================================ */
+.bio-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.bio-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+}
+
+.bio-text h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.02em;
+}
+
+.bio-text .title {
+  color: var(--muted);
+  font-size: 0.975rem;
+  margin-bottom: 1.25rem;
+}
+
+.bio-text p {
+  font-size: 0.975rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Research interest tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.tag {
+  background: var(--bg-tag);
+  color: var(--muted);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* Social / contact links in bio */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.social-link:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ============================================================
+   Publication list
+   ============================================================ */
+.pub-list {
+  list-style: none;
+}
+
+.pub-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.pub-item:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-weight: 600;
+  font-size: 0.975rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.pub-title a {
+  color: var(--ink);
+}
+
+.pub-title a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.pub-meta {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.pub-status {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.775rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.pub-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.6rem;
+}
+
+.pub-link {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  font-weight: 600;
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+}
+
+.pub-link:hover {
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-color: var(--accent);
+}
+
+/* "All research" arrow link */
+.more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ============================================================
+   Teaching
+   ============================================================ */
+.teaching-block {
+  margin-bottom: 2.5rem;
+}
+
+.teaching-block h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.teaching-block .period {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.course-list {
+  list-style: none;
+}
+
+.course-list li {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.925rem;
+}
+
+.course-list li:last-child {
+  border-bottom: none;
+}
+
+.course-code {
+  color: var(--muted);
+  font-size: 0.8rem;
+  min-width: 70px;
+  padding-top: 0.15rem;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.award-list {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.award-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.925rem;
+}
+
+.award-list li:last-child {
+  border-bottom: none;
+}
+
+/* ============================================================
+   Contact page
+   ============================================================ */
+.contact-block {
+  font-size: 0.975rem;
+}
+
+.contact-block p {
+  margin-bottom: 0.75rem;
+}
+
+.contact-block a {
+  font-weight: 500;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  main {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .bio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .bio-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+}
