@@ -1,0 +1,18 @@
+Campus Coffee Market — Artwork, Content, and Branding
+
+Copyright (c) 2026 Ross McKenzie. All rights reserved.
+
+The MIT License in LICENSE.txt applies to the software source code only. It
+does not grant permission to copy, modify, redistribute, or use the following
+materials separately from the deployed Campus Coffee Market game:
+
+- the original illustrations, coloured artwork, and visual assets;
+- the source sketches and exact-contour artwork exports;
+- social-preview and Open Graph artwork;
+- the Campus Coffee Market name, logo, and visual identity; or
+- scenario narratives, explanations, instructional text, and other written
+  educational content.
+
+The public game may be viewed and used for its intended interactive purpose.
+For permission to reproduce, adapt, or redistribute any reserved material,
+please contact Ross McKenzie.
