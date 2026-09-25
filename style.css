@@ -367,6 +367,10 @@ nav .container {
   border-radius: 6px;
 }
 
+.game-card + .game-card {
+  margin-top: 2rem;
+}
+
 .game-preview,
 .game-teaser-image {
   display: block;
