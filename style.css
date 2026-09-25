@@ -92,6 +92,8 @@ nav .container {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 2rem;
   list-style: none;
 }
@@ -341,6 +343,107 @@ nav .container {
 }
 
 /* ============================================================
+   Economics games
+   ============================================================ */
+.page-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.page-intro {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 0.975rem;
+}
+
+.game-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.game-preview,
+.game-teaser-image {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--bg-tag);
+}
+
+.game-preview img,
+.game-teaser-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.game-copy h2,
+.game-teaser h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.65rem;
+}
+
+.game-copy h2 a,
+.game-teaser h2 a {
+  color: var(--ink);
+}
+
+.game-copy h2 a:hover,
+.game-teaser h2 a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.game-kicker {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.game-copy > p:not(.game-kicker),
+.game-teaser p {
+  color: var(--muted);
+  font-size: 0.925rem;
+}
+
+.game-features {
+  margin: 1rem 0 1.25rem 1.1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.game-link {
+  display: inline-block;
+  padding: 0.55rem 0.9rem;
+  border-radius: 3px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.game-link:hover {
+  color: white;
+  text-decoration: none;
+  background: #152e4d;
+}
+
+.game-teaser {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* ============================================================
    Contact page
    ============================================================ */
 .contact-block {
@@ -389,10 +492,26 @@ footer {
   }
 
   .nav-links {
-    gap: 1.25rem;
+    justify-content: flex-start;
+    gap: 0.6rem 1.1rem;
   }
 
   .nav-links a {
     font-size: 0.75rem;
+  }
+
+  nav .container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .game-card,
+  .game-teaser {
+    grid-template-columns: 1fr;
+  }
+
+  .game-teaser-image {
+    max-width: 320px;
   }
 }
